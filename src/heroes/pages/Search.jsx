@@ -12,13 +12,16 @@ export const Search = () => {
 
   const heroes = getHeroesByName(q);
 
+  const showSearch = q.length === 0;
+  const showError = q.length > 0 && heroes.length === 0;
+
   const { searchText, onInputChange } = useForm({
     searchText: q,
   });
 
   const onSearchSubmit = (event) => {
     event.preventDefault();
-    if (searchText.trim().length <= 1) return;
+    // if (searchText.trim().length <= 1) return;
 
     navigate(`?q=${searchText}`);
   };
@@ -38,20 +41,27 @@ export const Search = () => {
               value={searchText}
               onChange={onInputChange}
             ></input>
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-primary" type="submit">
               Search
             </button>
           </form>
         </div>
 
         <div className="col-md-8 d-flex justify-content-center">
-          <div>
+          <div
+            className="animate__animated animate__fadeIn"
+            style={{ display: showSearch ? "" : "none" }}
+          >
             <div className="display-flex text-center">
               <img src="/assets/search.svg" alt="" className="w-50" />
             </div>
             <p className="text-center mt-3">Search a hero</p>
           </div>
-          <div>
+
+          <div
+            className="animate__animated animate__fadeIn"
+            style={{ display: showError ? "" : "none" }}
+          >
             <div className="display-flex text-center">
               <img src="/assets/noData.svg" alt="" className="w-50" />
             </div>
@@ -59,6 +69,7 @@ export const Search = () => {
               No hero found with <b>{q}</b>
             </p>
           </div>
+
           {heroes.map((hero) => (
             <HeroCard key={hero.id} {...hero} />
           ))}
