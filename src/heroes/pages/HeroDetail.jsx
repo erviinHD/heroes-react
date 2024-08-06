@@ -18,20 +18,20 @@ export const HeroDetail = () => {
 
   return (
     <>
-      <h1 className="display-5 mt-3">{hero.superhero}</h1>
+      <h1 className="display-5 mt-3 animate__animated animate__fadeInDown">{hero.superhero}</h1>
       <hr />
       <div className="row">
         <div className="col-md-3">
           <img
             src={`/assets/heroes/${hero.id}.jpg`}
-            className="card-img-top img-fluid img-thumbnail"
+            className="card-img-top img-fluid img-thumbnail animate__animated animate__fadeInLeft"
             alt={hero.superhero}
           ></img>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 animate__animated animate__fadeIn">
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
-              <b>Alther ego: </b>
+              <b>Alther Ego: </b>
               {hero.alter_ego}
             </li>
             <li className="list-group-item">

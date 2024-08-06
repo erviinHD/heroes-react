@@ -30,6 +30,14 @@ export const Navbar = () => {
             >
               DC
             </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              to="/search"
+            >
+              Search
+            </NavLink>
           </div>
         </div>
 
