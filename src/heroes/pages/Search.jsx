@@ -55,7 +55,9 @@ export const Search = () => {
             <div className="display-flex text-center">
               <img src="/assets/search.svg" alt="" className="w-50" />
             </div>
-            <p className="text-center mt-3">Search a hero</p>
+            <div class="alert alert-secondary mt-5 text-center" role="alert">
+              Search a hero
+            </div>
           </div>
 
           <div
@@ -65,9 +67,10 @@ export const Search = () => {
             <div className="display-flex text-center">
               <img src="/assets/noData.svg" alt="" className="w-50" />
             </div>
-            <p className="text-center mt-3">
+
+            <div class="alert alert-danger mt-5 text-center" role="alert">
               No hero found with <b>{q}</b>
-            </p>
+            </div>
           </div>
 
           {heroes.map((hero) => (
