@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 export const HeroCard = ({
-  id,
-  superhero,
-  publisher,
   alter_ego,
-  first_appearance,
   characters,
+  first_appearance,
+  id,
+  publisher,
+  superhero,
 }) => {
   const heroImgUrl = `/assets/heroes/${id}.jpg`;
   return (
@@ -22,7 +22,7 @@ export const HeroCard = ({
           <h5 className="card-title">{superhero}</h5>
           <p className="card-text">{characters}</p>
           <Link className="btn btn-primary" to={`/hero/${id}`}>
-            Ver mas...
+           More...
           </Link>
         </div>
       </div>
