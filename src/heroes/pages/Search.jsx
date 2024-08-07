@@ -53,7 +53,7 @@ export const Search = () => {
             style={{ display: showSearch ? "" : "none" }}
           >
             <div className="display-flex text-center">
-              <img src="/assets/search.svg" alt="" className="w-50" />
+              <img src="/search.svg" alt="" className="w-50" />
             </div>
             <div class="alert alert-secondary mt-5 text-center" role="alert">
               Search a hero
@@ -65,7 +65,7 @@ export const Search = () => {
             style={{ display: showError ? "" : "none" }}
           >
             <div className="display-flex text-center">
-              <img src="/assets/noData.svg" alt="" className="w-50" />
+              <img src="/noData.svg" alt="" className="w-50" />
             </div>
 
             <div class="alert alert-danger mt-5 text-center" role="alert">
