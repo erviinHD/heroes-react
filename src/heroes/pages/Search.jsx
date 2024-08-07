@@ -55,7 +55,10 @@ export const Search = () => {
             <div className="display-flex text-center">
               <img src="/search.svg" alt="" className="w-50" />
             </div>
-            <div class="alert alert-secondary mt-5 text-center" role="alert">
+            <div
+              className="alert alert-secondary mt-5 text-center"
+              role="alert"
+            >
               Search a hero
             </div>
           </div>
@@ -68,7 +71,7 @@ export const Search = () => {
               <img src="/noData.svg" alt="" className="w-50" />
             </div>
 
-            <div class="alert alert-danger mt-5 text-center" role="alert">
+            <div className="alert alert-danger mt-5 text-center" role="alert">
               No hero found with <b>{q}</b>
             </div>
           </div>
