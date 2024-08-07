@@ -23,7 +23,7 @@ export const HeroDetail = () => {
       <div className="row">
         <div className="col-md-3">
           <img
-            src={`/assets/heroes/${hero.id}.jpg`}
+            src={`/heroes/${hero.id}.jpg`}
             className="card-img-top img-fluid img-thumbnail animate__animated animate__fadeInLeft"
             alt={hero.superhero}
           ></img>

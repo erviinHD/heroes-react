@@ -8,7 +8,7 @@ export const HeroCard = ({
   publisher,
   superhero,
 }) => {
-  const heroImgUrl = `/assets/heroes/${id}.jpg`;
+  const heroImgUrl = `/heroes/${id}.jpg`;
   return (
     <div className="col-md-4 py-3 d-flex justify-content-center">
       <div className="card text-center animate__animated animate__fadeIn">
